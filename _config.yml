@@ -1,0 +1,12 @@
+title: "PortusSophia™ Lab — Governance & Engineering"
+description: "Operational workspace for governance standards, witness cycles, CI workflows, and structural integrity enforcement."
+theme: minima
+
+markdown: kramdown
+github:
+  is_project_page: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
