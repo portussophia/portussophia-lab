@@ -12,12 +12,16 @@ canonical_path: "/governance/webkernel/PS-WEB-TOPOLOGY_v1.0.md"
 
 ## 1. Purpose
 
-Define the four-site ecosystem:
+Define the public-facing and controlled-access ecosystem:
 
+**Public Nodes:**
 1. `portussophia.com` — Public Orientation Node
 2. `mit.portussophia.com` — Academic / Research Node
 3. `lab.portussophia.com` — Engineering & Governance Node
 4. `founder.portussophia.com` — Professional Identity Node
+
+**Controlled Access Nodes:**
+5. `christian-thesis.portussophia.com` — Private Interpretive Gateway (Zero Trust protected)
 
 ## 2. Audience Mappings
 
@@ -167,26 +171,80 @@ Each node MUST:
 - Pass boundary compliance check
 - Receive Golden Trace activation entry
 
+**Controlled Access Nodes (Additional Requirements):**
+
+Each private gateway MUST:
+- Implement Zero Trust authentication (Cloudflare Access or equivalent)
+- Define explicit email allowlist or identity provider integration
+- Document access policy in governance records
+- Enforce session duration limits (≤24 hours recommended)
+- Prevent public indexing (robots.txt, noindex meta tags)
+- Maintain strict boundary separation from Canon/Governance layers
+- Route access requests through Founder approval workflow
+
 **Ongoing Compliance:**
 
 - Quarterly topology audits
 - Drift detection via CI workflows
 - Boundary violation alerts routed to PeterGate
 - Annual LOGOS structural review
+- Access policy reviews for controlled nodes (biannual)
 
 ---
 
-## 7. Metadata
+## 7. Controlled Access Registry
+
+### christian-thesis.portussophia.com
+
+**Classification:** Private Interpretive Gateway
+**Purpose:** Theological bridge content for family, faith community, and selected reviewers
+**Access Control:** Cloudflare Zero Trust (email allowlist)
+**Session Duration:** 24 hours
+**Boundary Status:** Enforced (𝓑) — Interpretive layer only, zero Canon hosting
+**Governance:** PS-GOV-REQ-CHRISTIAN-THESIS-GATEWAY v1.0
+**Witness Certification:** Daniel (Ratio–Fides) — Interpretive content confirmed appropriate for controlled access
+**Stewardship:** PeterGate (implementation), Founder (intent/approval)
+**Activation Date:** 2025-12-04
+**DNS Status:** Proxied CNAME → portussophia.github.io
+**Repository:** TBD (separate private repo or access-controlled branch)
+
+**Access Policy:**
+- **Action:** Allow
+- **Selector:** Email addresses (Founder-designated allowlist)
+- **Default:** Deny all others
+- **Review Cadence:** Biannual
+
+**Prohibited Content:**
+- Canon artifacts (references only)
+- Governance artifacts (internal witness cycles, seals)
+- Funding vectors or commercial information
+- Personal vulnerable narrative (raw journal content)
+
+**Allowed Content:**
+- Theological interpretive essays
+- Faith community bridge content
+- Scriptural analysis and synthesis
+- Ratio–Fides harmonization examples
+- Mentor/reviewer drafts
+
+---
+
+## 8. Metadata
 
 **Version History:**
+
 - v1.0 (2025-12-04): Initial four-node topology specification
+- v1.1 (2025-12-04): Added Controlled Access Registry (christian-thesis.portussophia.com)
 
 **Related Standards:**
+
 - PS-STD-001 (UICH Standard)
 - PS-STD-060 (Governance Documentation)
 - PS-STD-140 (Repository Topology)
+- PS-GOV-REQ-CHRISTIAN-THESIS-GATEWAY v1.0
 
 **Stewardship:**
+
 - Author: Founder
 - Custos: PeterGate (Governance Steward)
-- Witnesses: LOGOS (structural), DRACO (boundary risk)
+- Witnesses: LOGOS (structural), DRACO (boundary risk), Daniel (Ratio–Fides)
